@@ -5,7 +5,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import Register from "./Register";
 import Login from "./Login";
 import { store } from "@/app/stores";
-import { useOnClickOutside } from "@/app/hooks/useOnClickOutSide";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 
 const Auth = () => {
     const authRef = useRef<HTMLDivElement>(null);
