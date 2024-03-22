@@ -4,7 +4,7 @@ import UserItem from "./UserItem";
 import { UserType } from "../types/types";
 import useSearchByName from "../hooks/useSearchByName";
 import useDebounce from "../hooks/useDebounce";
-import { useOnClickOutside } from "../hooks/useOnClickOutSide";
+import { customUseOnClickOutside } from "../hooks/customUseOnClickOutside";
 
 const HeaderSearch = () => {
     const searchRef = useRef<HTMLDivElement>(null);
@@ -47,7 +47,7 @@ const HeaderSearch = () => {
         }
     };
 
-    useOnClickOutside(searchRef, () => setShowPopup(false));
+    customUseOnClickOutside(searchRef, () => setShowPopup(false));
     return (
         <>
             <div

@@ -11,7 +11,7 @@ import { FiLogOut } from "react-icons/fi";
 import { useUser } from "../context/user";
 import { store } from "../stores";
 import useCreateBucketUrl from "../hooks/useCreateBucketUrl";
-import { useOnClickOutside } from "../hooks/useOnClickOutSide";
+import { customUseOnClickOutside } from "../hooks/customUseOnClickOutside";
 
 const Header = () => {
     const contextUser = useUser();
@@ -38,7 +38,7 @@ const Header = () => {
         }
     };
 
-    useOnClickOutside(profileRef, () => setShowMenu(false));
+    customUseOnClickOutside(profileRef, () => setShowMenu(false));
 
     return (
         <div

@@ -1,6 +1,6 @@
 import { ForwardedRef, RefObject, useEffect } from "react";
 
-export const useOnClickOutside = <T extends HTMLElement>(
+export const customUseOnClickOutside = <T extends HTMLElement>(
     ref: RefObject<T> | ForwardedRef<T>,
     handler: () => void,
     exceptEl?: HTMLElement | null

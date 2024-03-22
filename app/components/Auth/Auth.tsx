@@ -5,7 +5,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import Register from "./Register";
 import Login from "./Login";
 import { store } from "@/app/stores";
-import { useOnClickOutside } from "../../hooks/useOnClickOutside";
+import { customUseOnClickOutside } from "../../hooks/customUseOnClickOutside";
 
 const Auth = () => {
     const authRef = useRef<HTMLDivElement>(null);
@@ -17,7 +17,7 @@ const Auth = () => {
         setIsLoginModal(false);
     };
 
-    useOnClickOutside(authRef, () => setIsLoginModal(false));
+    customUseOnClickOutside(authRef, () => setIsLoginModal(false));
 
     return (
         <>

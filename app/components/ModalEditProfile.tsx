@@ -14,7 +14,7 @@ import useUpdateProfile from "../hooks/useUpdateProfile";
 import useChangeUserImage from "../hooks/useChangeUserImage";
 import useUpdateProfileImage from "../hooks/useUpdateProfileImage";
 import useCreateBucketUrl from "../hooks/useCreateBucketUrl";
-import { useOnClickOutside } from "../hooks/useOnClickOutSide";
+import { customUseOnClickOutside } from "../hooks/customUseOnClickOutside";
 import Loading from "../loading";
 interface CropperDimensions {
     height?: number | null;
@@ -133,7 +133,9 @@ const ModalEditProfile = () => {
     };
 
     if (!isUpdating) {
-        useOnClickOutside(editModalRef, () => setIsEditProfileModal(false));
+        customUseOnClickOutside(editModalRef, () =>
+            setIsEditProfileModal(false)
+        );
     }
 
     return (
